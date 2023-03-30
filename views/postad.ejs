@@ -1,0 +1,142 @@
+<%- include("partials/userheader"); -%>
+<div class="content blog">
+  <div class="coverimage">
+    <img src="img/cover.jpg" class="bannercoveruser" alt="banner">
+  </div>
+  <div class="post-section blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="container">
+            <div class="row">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="widget">
+                      <div class="rounded-circle customsize">
+                        <img src=" img/user.jpg" class="topupset" alt="logo"/>
+                      </div>
+                      <div class="admin-box">
+                        <div class="user">
+                          <div class="username colorcodebage">
+                            <h3><%= naam  %></h3>
+
+                          </div>
+                        </div>
+                        <nav class="navdashboard">
+                          <ul>
+                            <li>
+                              <a href="#">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Dashboard</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="myprofile.html">
+                      <i class="fa fa-user"></i>
+                      <span>My Profile</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/">
+                                <i class="fa fa-sign-out"></i>
+                                <span>Logout</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="col-sm-12 background_white">
+                      <form action="/postad" method="post" class="row" role="form" enctype="multipart/form-data">
+                        <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+                          <div class="form-group ">
+                            <label class="font-weight-bold">Seller Full Name</label>
+                            <input type="text" class="form-control" name="adtitle">
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-12 ">
+                          <div class="form-group ">
+                            <label class="font-weight-bold">Select Category</label>
+                            <select class="form-control" name="selectCategory">
+                              <option>Laptop</option>
+                              <option>Electronics</option>
+                              <option>Games</option>
+                              <option>Phone</option>
+                              <option>Books</option>
+                              <option>Others</option>
+                            </select>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-12 ">
+                          <div class="form-group ">
+                            <label class="font-weight-bold">Product(Name)</label>
+                  
+                            <input type="text" class="form-control" placeholder="Enter type of Product" name="product">
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+                          <div class="form-group ">
+                            <label class="font-weight-bold">Price</label>
+                            <input type="number" class="form-control" required="true" placeholder="Enter Price" name="price">
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+                          <div class="form-group ">
+                            <label class="font-weight-bold">Phone no.</label>
+                            <input type="number" class="form-control" required="true" placeholder="contact no" name="phoneno">
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+                          <div class="form-group ">
+                            <label class="font-weight-bold">Year</label>
+                            <input type="number" class="form-control" required="true" placeholder="Year of purchase" name="year">
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-12 ">
+                          <div class="form-group ">
+                            <label class="font-weight-bold">Condition</label>
+                            <div class="form-group marginforradio">
+                              <label for="id_new">New</label>
+                              <input type="radio" id="id_new" name="condition" value="new">
+                              <label for="id_old">Old</label>
+                              <input type="radio" id="id_old" name="condition" value="old">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-12 ">
+                          <div class="form-group uploadingsmultiple">
+                            <label for="file">
+                                  <!-- <span><i class="fa fa-upload"></i></span> -->
+                                  <input type="file" id="file" name="image">
+                                  <!-- <input type="file" class="d-none" id="file" name="file[]" multiple=""> -->
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-12 ">
+                          <div class="form-group ">
+                            <label class="font-weight-bold ">Description</label>
+                            <textarea name="description" cols="50" class=" sizetextarea col-md-12 col-xl-12 col-lg-12 col-sm-12 col-12"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-12 ">
+                          <div class="form-group ">
+                            <input type="submit" value="Add Product" class="custom-button">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("partials/footer"); -%> 

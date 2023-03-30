@@ -1,0 +1,17 @@
+<%
+async function getapi() {
+    let image=localStorage.getItem('image');
+    const data ={image}; 
+
+    let a = await fetch("http://localhost:3000/GetProductDetails", {
+      method: 'GET', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+
+    let Res = await a.json();
+    console.log(Res);
+}
+%>

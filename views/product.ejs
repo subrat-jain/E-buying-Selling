@@ -1,0 +1,110 @@
+<%- include("partials/userheader"); -%>
+<div class="content blog">
+  <div class="hero-homepage subpage">
+    <div class="container wrapping-content">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="tagline">
+            <h1></h1>
+            <h2>Where Comes Quality</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-section blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <h2 class="styleh2 karma margin_10px"><%= product.product  %> </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-12 col-xs-12">
+          <div id="productcarosal" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner height-adjust">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src=<%= product.image  %> alt="First slide"></img>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-xs-12 first-height">
+          <div class="boxwedigt margin_10px ">
+            <div class="text-center">
+              <h4><i class="fa fa-rupee"></i> <span class="karma"><%= product.price  %></span></h4>
+            </div>
+          </div>
+
+          <div class="boxwedigt margin_10px ">
+            <h6>Contact Seller</h6>
+            <div class="text-center">
+              <h4><i class="fa fa-user"></i> <span class="karma"><%= product.adtitle  %></span></h4>
+              <div class="clearfix"></div>
+              <p class="margin_10px mb-0"><a style="color: rgb(60, 60, 60);" href="tel:#"><strong><i class="fa fa-phone"></i> <%= product.phoneno  %></strong></a></p>
+            </div>
+          </div>
+          <div class="boxwedigt margin_10px ">
+            <div >
+              <div>
+                <h6>Description</h6>
+                <p class="text-center">
+                  <%= product.description %>
+                </p>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-12 col-xs-12">
+          <div class="post-content-wrapper bg-white">
+            <div class="entry-summary boxwedigt ">
+              
+              <div class="row">
+                <div class="col-sm-3 col-6 col-md-3">
+                  <strong>Year</strong>
+
+                </div>
+                <div class="col-sm-3  col-6 col-md-3">
+                  <%= product.year %>
+
+                </div>
+                <div class="col-sm-3  col-6 col-md-3">
+                  <strong>Condition</strong>
+
+                </div>
+                <div class="col-sm-3  col-6 col-md-3">
+                  <%= product.condition %>
+
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-6 col-md-3">
+                  <strong>Category</strong>
+
+                </div>
+                <div class="col-sm-3  col-6 col-md-3">
+                  <%= product.selectCategory %>
+
+                </div>
+                <div class="col-sm-3  col-6 col-md-3">
+                  <strong>Product</strong>
+
+                </div>
+                <div class="col-sm-3  col-6 col-md-3">
+                  <%= product.product%>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("partials/footer"); -%>
